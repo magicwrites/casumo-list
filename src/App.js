@@ -13,6 +13,8 @@ class App extends React.Component {
       books: _.range(100000).map((x, i) => ({
         id: i + 1,
         name: faker.commerce.productName(),
+        publishedAt: faker.date.past(),
+        genre: _.sample(['drama', 'romance', 'action', 'fantasy', 'sci-fi', 'finance', 'horror']),
         author: {
           gender: Math.random() > 0.5 ? 'male' : 'female',
           name: faker.name.findName()
