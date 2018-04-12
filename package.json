@@ -1,0 +1,30 @@
+{
+  "name": "casumo-list",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "faker": "^4.1.0",
+    "lodash": "^4.17.5",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-scripts": "1.1.4",
+    "react-virtualized": "^9.18.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.19.1",
+    "eslint-plugin-flowtype": "^2.46.1",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  }
+}
