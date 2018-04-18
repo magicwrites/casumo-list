@@ -3,12 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "classnames": "^2.2.5",
     "faker": "^4.1.0",
     "lodash": "^4.17.5",
+    "lodash.sortby": "^4.7.0",
+    "moment": "^2.22.0",
     "react": "^16.3.1",
+    "react-animated-number": "^0.4.4",
     "react-dom": "^16.3.1",
+    "react-redux": "^5.0.7",
     "react-scripts": "1.1.4",
-    "react-virtualized": "^9.18.5"
+    "react-virtualized": "^9.18.5",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
+    "simple-format-number": "^0.1.2",
+    "store": "^2.0.12"
   },
   "scripts": {
     "start": "react-scripts start",

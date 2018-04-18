@@ -1,7 +1,7 @@
 import React from 'react';
-import BooksVirtualList from './BooksVirtualList'
+import BookVirtualList from './../book-virtual-list/component'
 
-class Books extends React.Component {
+class BookList extends React.Component {
   constructor(props) {
     super(props);
 
@@ -21,11 +21,11 @@ class Books extends React.Component {
     const { width } = this.state;
 
     return (
-      <div className="books" ref="books" style={{ width: '100%' }}>
-        {width && <BooksVirtualList books={books} width={width} />}
+      <div className="books" ref="books" style={{ width: '100%', padding: '25px 0' }}>
+        {width && <BookVirtualList books={books} width={width} />}
       </div>
     );
   }
 }
 
-export default Books;
+export default BookList;

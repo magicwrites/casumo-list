@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato';
+  /*font-family: 'Montserrat';*/
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+body h1 {
+  margin: 30px 0;
+  font-family: 'Montserrat';
+  font-size: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+body .header-bottom * {
+  color: #fec631;
+}
+
+body .header-bottom *:not(h1) {
+  font-size: 16px;
+  color: #ffda79;
+}
+
+body .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: normal;
+  font-family: 'Montserrat';
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  line-height: 40px;
+  margin: 0;
+  padding: 0;
+}

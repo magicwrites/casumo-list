@@ -1,0 +1,35 @@
+.cl-button {
+  border-radius: 2px;
+  padding: 5px 10px;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  transition: 0.25s;
+  color: white;
+  background-color: #51abda;
+}
+
+.cl-button[disabled] {
+  pointer-events: none;
+}
+
+.cl-button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #fec631;
+}
+
+.cl-button:hover .cl-icon path {
+  fill: white;
+}
+
+.cl-inactive {
+  background-color: #eee;
+  color: black;
+}
+
+.cl-inactive .cl-icon path {
+  transition: 0.25s;
+}

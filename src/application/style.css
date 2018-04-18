@@ -1,0 +1,18 @@
+.header-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  z-index: 100;
+  border-bottom: 1px solid #eee;
+  height: 100px;
+  /*box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06), 0 4px 5px 0 rgba(0,0,0,0.06), 0 1px 10px 0 rgba(0,0,0,0.08);*/
+  padding-top: 5px;
+}
+
+.header-bottom {
+  padding-top: 100px;
+  background-color: #51abda;
+  background-image: url('./header-background.png');
+}
