@@ -1,19 +1,7 @@
-import _ from 'lodash';
-import faker from 'faker';
-import CONSTANTS from './../constants'
+import CONSTANTS from './../constants';
+import { randomizeBooks } from './randomizer';
 
-const randomizeBook = (x, i) => ({
-  id: i + 1,
-  name: _.capitalize(faker.lorem.words()),
-  publishedAt: faker.date.past(),
-  genre: _.sample(CONSTANTS.BOOK.GENRES),
-  author: {
-    gender: Math.random() > 0.5 ? CONSTANTS.GENDERS.MALE : CONSTANTS.GENDERS.FEMALE,
-    name: faker.name.findName()
-  }
-});
-
-const initialState = _.range(25000).map(randomizeBook);
+const initialState = randomizeBooks(250000)
 
 export default function booksReducer(state = initialState, action) {
   let updatedState = state;

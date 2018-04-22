@@ -5,8 +5,6 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 
-import registerServiceWorker from './registerServiceWorker';
-
 import booksReducer from './books/reducer';
 import filtersReducer from './filters/reducer';
 
@@ -33,5 +31,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
-
-registerServiceWorker();

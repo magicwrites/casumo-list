@@ -1,8 +1,8 @@
 import CONSTANTS from './../constants'
 import booksActions from './../books/actions'
-import workerSort from './worker-sort';
+import SorterWorker from './sorter.worker.js';
 
-const sortWorker = new Worker(workerSort);
+const sorterWorker = new SorterWorker();
 
 function startSort(path) {
   return {
@@ -30,8 +30,8 @@ const sort = (path) => (dispatch, getState) => {
 
   const books = getState().books;
 
-  sortWorker.postMessage({ books, path });
-  sortWorker.onmessage = (event) => {
+  sorterWorker.postMessage({ books, path });
+  sorterWorker.onmessage = (event) => {
     dispatch(booksActions.update(event.data))
   }
 }
