@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import actions from './actions';
+import actions from './../../../../actions';
 import Filters from './component';
 
 function mapStateToProperties(state, ownedProperties) {
@@ -12,8 +12,8 @@ function mapDispatchToProperties(dispatch, ownedProperties) {
   return {
     onSortByBookName: () => dispatch(actions.sort('name')),
     onSortByBookAuthor: () => dispatch(actions.sort('author.name')),
-    onFilterByBookGenre: (genre) => dispatch(actions.filterGenre(genre)),
-    onFilterByAuthorGender: (gender) => dispatch(actions.filterAuthorGender(gender))
+    onFilterByBookGenre: (genre) => dispatch(actions.toggleGenre(genre)),
+    onFilterByAuthorGender: (gender) => dispatch(actions.toggleAuthorGender(gender))
   };
 }
 

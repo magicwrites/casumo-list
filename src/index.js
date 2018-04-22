@@ -1,22 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createLogger } from 'redux-logger';
-import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 
-import booksReducer from './books/reducer';
-import filtersReducer from './filters/reducer';
-
 import Application from './application/component';
+
+import actions from './actions'
+import worker from './worker'
+import reducer from './reducer'
 
 import 'react-virtualized/styles.css';
 import './style.css';
 
-const reducer = combineReducers({
-  books: booksReducer,
-  filters: filtersReducer
-});
 
 const middleware = [
   thunk,
@@ -24,6 +21,10 @@ const middleware = [
 ];
 
 const store = createStore(reducer, applyMiddleware(...middleware));
+
+worker.connect(store.dispatch)
+
+store.dispatch(actions.add(250000))
 
 ReactDOM.render(
   <Provider store={store}>

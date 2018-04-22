@@ -8,6 +8,10 @@ class BookVirtualList extends React.Component {
     const { books, width } = this.props;
     const rowHeight = 45;
 
+    if (!books) {
+      return <div>First books are beeing randomized...</div>
+    }
+
     if (!books.length) {
       return <div>Seems like there are no books matching your filters!</div>
     }

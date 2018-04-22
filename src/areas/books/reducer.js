@@ -1,14 +1,13 @@
-import CONSTANTS from './../constants';
-import { randomizeBooks } from './randomizer';
+import CONSTANTS from './../../constants';
 
-const initialState = randomizeBooks(250000)
+const initialState = null
 
 export default function booksReducer(state = initialState, action) {
   let updatedState = state;
 
   switch (action.type) {
 
-    case CONSTANTS.ACTIONS.BOOKS_UPDATE:
+    case CONSTANTS.ACTIONS.UPDATE_LIST:
       updatedState = action.payload.books;
       break;
 

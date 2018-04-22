@@ -1,57 +1,15 @@
-import React from 'react';
-import classNames from 'classnames';
-import moment from 'moment';
-import CONSTANTS from './../../constants';
+import React from 'react'
+import classNames from 'classnames'
+import moment from 'moment'
+import CONSTANTS from './../../../../constants'
+import { checkForHorrorOnHalloween, checkForFinanceOnMonthLastFriday } from './../../../../domain'
 
-import './style.css';
+import './style.css'
 
-// todo: EXPORT THOSE FUCNTIONS
 
-const getLastFridayForMonth = (monthAt) => {
-  var lastDay = moment(monthAt).endOf('month').startOf('day');
-
-  switch (lastDay.day()) {
-    case 6: return lastDay.subtract(1, 'days');
-    default: return lastDay.subtract(lastDay.day() + 2, 'days');
-  }
-}
-
-const checkForHalloween = (timeAt) => {
-  const dateAt = moment(timeAt);
-
-  return dateAt.get('date') === 31 &&
-         dateAt.get('month') === 9;
-}
-
-const checkForHorrorOnHalloween = (book) => {
-  if (book.genre !== 'horror') { // todo: CONTSTANTS
-    return false
-  }
-
-  if (!checkForHalloween(book.publishedAt)) {
-    return false
-  }
-
-  return true;
-}
-
-const checkForFinanceOnMonthLastFriday = (book) => {
-  if (book.genre !== 'finance') { // todo: CONSTANTS
-    return false
-  }
-
-  const lastFridayAt = getLastFridayForMonth(book.publishedAt)
-  const publishedAt = moment(book.publishedAt)
-
-  if (!lastFridayAt.isSame(publishedAt, 'day')) {
-    return false
-  }
-
-  return true
-}
 
 const getDisplayDate = (timeAt) => {
-  return moment(timeAt).format('dddd Do of MMMM YYYY') // todo: CONSTANTS
+  return moment(timeAt).format(CONSTANTS.FORMATS.DATE)
 }
 
 const BookLabels = ({ book }) => {

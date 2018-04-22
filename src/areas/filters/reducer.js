@@ -1,4 +1,4 @@
-import CONSTANTS from './../constants';
+import CONSTANTS from './../../constants';
 
 const initialState = {
   filterBy: {
@@ -16,11 +16,11 @@ export default function filtersReducer(state = initialState, action) {
 
   switch (action.type) {
 
-    case CONSTANTS.ACTIONS.FILTERS_SORT:
+    case CONSTANTS.ACTIONS.START_SORTING:
       updatedState = { ...state, sortBy: action.payload.path, isUpdating: true };
       break;
 
-    case CONSTANTS.ACTIONS.FILTERS_TOGGLE_GENRE:
+    case CONSTANTS.ACTIONS.TOGGLE_GENRE:
       updatedState = {
         ...state,
         filterBy: {
@@ -30,7 +30,7 @@ export default function filtersReducer(state = initialState, action) {
       };
       break;
 
-    case CONSTANTS.ACTIONS.FILTERS_TOGGLE_AUTHOR_GENDER:
+    case CONSTANTS.ACTIONS.TOGGLE_AUTHOR_GENDER:
       updatedState = {
         ...state,
         filterBy: {
@@ -40,7 +40,7 @@ export default function filtersReducer(state = initialState, action) {
       };
       break;
 
-    case CONSTANTS.ACTIONS.BOOKS_UPDATE:
+    case CONSTANTS.ACTIONS.UPDATE_LIST:
       updatedState = { ...state, isUpdating: false };
       break;
 

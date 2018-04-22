@@ -1,9 +1,9 @@
 import React from 'react';
 
-import CONSTANTS from './../constants'
-import Discriminators from './discriminators/component';
-import Sorter from './sorter/component';
-import Spinner from './spinner/component';
+import CONSTANTS from './../../../../constants'
+import Discriminators from './../discriminators/component';
+import Sorter from './../sorter/component';
+import Spinner from './../spinner/component';
 
 import './style.css';
 
