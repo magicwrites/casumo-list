@@ -11,7 +11,10 @@ const Loader = ({ isUpdating }) => {
         <BarLoader color="#ab8c71" loading={true} />
       </div>
       <div className="container">
-        <div className="loader-message">Creating additional book records</div>
+        <div className="loader-message">
+          <span className={classNames({ visible: isUpdating === 'add' })}>Creating book records</span>
+          <span className={classNames({ visible: isUpdating === 'sort' })}>Sorting book records</span>
+        </div>
       </div>
     </aside>
   )

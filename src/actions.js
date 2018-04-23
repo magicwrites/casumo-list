@@ -8,6 +8,13 @@ function updateList(books) {
   };
 }
 
+function extendList(books) {
+  return {
+    type: CONSTANTS.ACTIONS.EXTEND_LIST,
+    payload: { books }
+  };
+}
+
 function startAddition(amount) {
   return {
     type: CONSTANTS.ACTIONS.START_ADDITION,
@@ -48,8 +55,8 @@ const addThenSort = amount => (dispatch, getState) => {
   dispatch(startAddition(amount));
 
   const state = getState()
-  const { books, filter } = state
-  const payload = { amount, books, path: filter.sortBy }
+  const { books, filters } = state
+  const payload = { amount, books, path: filters.sortBy }
 
   worker.postMessage({ payload, request: CONSTANTS.WORKER.REQUESTS.ADD_THEN_SORT })
 }
@@ -64,4 +71,4 @@ const sort = path => (dispatch, getState) => {
   worker.postMessage({ payload, request: CONSTANTS.WORKER.REQUESTS.SORT })
 }
 
-export default { updateList, add, sort, addThenSort, toggleGenre, toggleAuthorGender };
+export default { updateList, extendList, add, sort, addThenSort, toggleGenre, toggleAuthorGender };

@@ -15,8 +15,14 @@ const Sorter = ({ isDisabled, isActive, label, onClick }) => {
 const Sorters = ({ sortBy, onSort, isUpdating }) => {
   return (
     <div className="sorters">
-      <Sorter isDisabled={isUpdating} isActive={sortBy === 'name'} onClick={() => onSort('name')} label="book name" />
-      <Sorter isDisabled={isUpdating} isActive={sortBy === 'author.name'} onClick={() => onSort('author.name')} label="author name" />
+      <Sorter isDisabled={isUpdating || sortBy === 'name'}
+              isActive={sortBy === 'name'}
+              onClick={() => onSort('name')}
+              label="book name" />
+      <Sorter isDisabled={isUpdating || sortBy === 'author.name'}
+              isActive={sortBy === 'author.name'}
+              onClick={() => onSort('author.name')}
+              label="author name" />
     </div>
   )
 }

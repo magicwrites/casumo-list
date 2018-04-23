@@ -29,6 +29,7 @@
 .toggle.active {
   background-color: white;
   color: black;
+  opacity: 1 !important; /* overwrite disabled styles */
 }
 
 .toggle.active svg {
@@ -37,6 +38,10 @@
 
 .toggle .type {
   opacity: 0.5;
+}
+
+.toggle[disabled] svg {
+  opacity: 0;
 }
 
 .toggle svg,

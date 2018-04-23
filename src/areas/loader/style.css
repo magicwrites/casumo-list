@@ -17,6 +17,7 @@
 
 .loader-bar > * {
   width: 100% !important;
+  z-index: 200;
 }
 
 .loader-message {
@@ -24,8 +25,21 @@
   padding-top: 4px;
   height: 26px;
   background: #DECBA4;
+  position: relative;
+  z-index: 50;
 }
 
+.loader-message > span {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  transition: 0.25s;
+  opacity: 0;
+}
+
+.loader-message span.visible,
 .loader.visible {
   opacity: 1;
 }

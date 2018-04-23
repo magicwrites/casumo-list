@@ -6,7 +6,7 @@ import './style.css'
 
 const Header = ({ onAdd, onAddThenSort, booksAmount, isSorted, isUpdating }) => {
   const addMethod = isSorted ? onAddThenSort : onAdd
-  const increment = booksAmount * 2
+  const increment = booksAmount
 
   const isDisabled = isUpdating
   const onAction = isDisabled ? () => {} : addMethod

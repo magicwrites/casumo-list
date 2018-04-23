@@ -15,14 +15,14 @@ self.onmessage = event => {
     const { amount } = payload
     const books = create(amount)
 
-    self.postMessage(books)
+    self.postMessage({ type: CONSTANTS.ACTIONS.EXTEND_LIST, payload: books })
   }
 
   if (request === CONSTANTS.WORKER.REQUESTS.SORT) {
     const { books, path } = payload
     const sorted = sort(books, path);
 
-    self.postMessage(sorted);
+    self.postMessage({ type: CONSTANTS.ACTIONS.UPDATE_LIST, payload: sorted });
   }
 
   if (request === CONSTANTS.WORKER.REQUESTS.ADD_THEN_SORT) {
@@ -30,6 +30,6 @@ self.onmessage = event => {
     const joined = [ ...books, ...create(amount) ]
     const sorted = sort(joined, path);
 
-    self.postMessage(sorted);
+    self.postMessage({ type: CONSTANTS.ACTIONS.UPDATE_LIST, payload: sorted });
   }
 }

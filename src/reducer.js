@@ -32,9 +32,11 @@ const sortByReducer = (state = null, action) => {
 const isUpdatingReducer = (state = false, action) => {
   switch (action.type) {
     case CONSTANTS.ACTIONS.START_SORTING:
+      return 'sort';
     case CONSTANTS.ACTIONS.START_ADDITION:
-      return true;
+      return 'add';
     case CONSTANTS.ACTIONS.UPDATE_LIST:
+    case CONSTANTS.ACTIONS.EXTEND_LIST:
       return false;
     default:
       return state
@@ -51,6 +53,8 @@ const booksReducer = (state = null, action) => {
   switch (action.type) {
     case CONSTANTS.ACTIONS.UPDATE_LIST:
       return action.payload.books;
+    case CONSTANTS.ACTIONS.EXTEND_LIST:
+      return [...action.payload.books, ...(state || [])];
     default:
       return state
   }
