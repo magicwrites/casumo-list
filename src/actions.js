@@ -25,14 +25,14 @@ function startSorting() {
 function toggleGenre(genre) {
   return {
     type: CONSTANTS.ACTIONS.TOGGLE_GENRE,
-    payload: { genre }
+    payload: { filter: genre }
   }
 }
 
 function toggleAuthorGender(gender) {
   return {
     type: CONSTANTS.ACTIONS.TOGGLE_AUTHOR_GENDER,
-    payload: { gender }
+    payload: { filter: gender }
   }
 }
 

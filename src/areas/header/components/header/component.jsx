@@ -2,7 +2,7 @@ import React from 'react';
 import AnimatedNumber from 'react-animated-number';
 import formatNumber from 'simple-format-number';
 
-const Header = ({ booksAmount = 0 }) => {
+const Header = ({ onAdd, booksAmount = 0 }) => {
   return (
     <div className="row">
       <div className="col-8">
@@ -19,13 +19,14 @@ const Header = ({ booksAmount = 0 }) => {
               fontSize: 32,
               transitionProperty: 'background-color, color, opacity'
             }}
+            duration={2000}
             formatValue={x => formatNumber(x, { fractionDigits: 0 })}
           />
         </div>
 
         <div>books in play</div>
 
-        <button onClick={() => this.setState({ temporary: this.state.temporary * 2 })}>double that!</button>
+        <button onClick={() => onAdd(booksAmount * 2)}>double that!</button>
       </div>
     </div>
   )

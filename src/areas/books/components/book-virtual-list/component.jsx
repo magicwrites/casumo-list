@@ -6,7 +6,7 @@ import Book from './../book/component'
 class BookVirtualList extends React.Component {
   render() {
     const { books, width } = this.props;
-    const rowHeight = 45;
+    const rowHeight = 80;
 
     if (!books) {
       return <div>First books are beeing randomized...</div>
@@ -19,7 +19,7 @@ class BookVirtualList extends React.Component {
     return (
       <WindowScroller>
         {({ height, isScrolling, registerChild, scrollTop }) => (
-          <div ref={registerChild} style={{ borderBottom: '1px solid #eee' }}>
+          <div ref={registerChild}>
             <List
               autoHeight
               height={height}

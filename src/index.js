@@ -12,7 +12,7 @@ import worker from './worker'
 import reducer from './reducer'
 
 import 'react-virtualized/styles.css';
-import './style.css';
+// import './style.css';
 
 
 const middleware = [
@@ -24,7 +24,7 @@ const store = createStore(reducer, applyMiddleware(...middleware));
 
 worker.connect(store.dispatch)
 
-store.dispatch(actions.add(250000))
+store.dispatch(actions.add(25000))
 
 ReactDOM.render(
   <Provider store={store}>

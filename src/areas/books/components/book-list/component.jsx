@@ -21,7 +21,7 @@ class BookList extends React.Component {
     const { width } = this.state;
 
     return (
-      <div className="books" ref="books" style={{ width: '100%', padding: '25px 0' }}>
+      <div className="books" ref="books" style={{ width: '100%' }}>
         {width && <BookVirtualList books={books} width={width} />}
       </div>
     );
