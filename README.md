@@ -24,11 +24,10 @@
 
 ## Known flaws
 
-- have not really bothered to make a responsive website, so please use screen with 700px +
+- have not really bothered to make a responsive website, so please use screen with width of 700px and more
 - if there are loads of records (500,000+ on my machine), sorting freezes browser for notable amount of time on completion
-- if there are ridiculous amount of records (2,000,000 on my machine) browser dies, I have opted not to limit this
-- firefox blinks terribly on scroll
-- webworker died once during my testing, doesnt really seems to be happening anymore though
+- chrome is not really handling well if there are more than 1,000,000 records, and usually dies
+- firefox and safari blinks terribly on scroll
 - could have introduced less or sass to store some colors in variables, opted out since this is a really simple demo
 - no tests (╯°□°）╯︵ ┻━┻
 
