@@ -3,8 +3,6 @@ import faker from 'faker';
 import CONSTANTS from './constants'
 import moment from 'moment'
 
-
-
 const getLastFridayForMonth = (monthAt) => {
   var lastDay = moment(monthAt).endOf('month').startOf('day');
 
@@ -22,7 +20,7 @@ const checkForHalloween = (timeAt) => {
 }
 
 const checkForHorrorOnHalloween = (book) => {
-  if (book.genre !== 'horror') { // todo: CONTSTANTS
+  if (book.genre !== CONSTANTS.GENRES.HORROR) {
     return false
   }
 
@@ -34,7 +32,7 @@ const checkForHorrorOnHalloween = (book) => {
 }
 
 const checkForFinanceOnMonthLastFriday = (book) => {
-  if (book.genre !== 'finance') { // todo: CONSTANTS
+  if (book.genre !== CONSTANTS.GENRES.FINANCE) {
     return false
   }
 
@@ -52,7 +50,7 @@ const randomizeBook = (x, i = 0) => ({
   id: i + 1,
   name: _.capitalize(faker.lorem.words()),
   publishedAt: faker.date.past(),
-  genre: _.sample(CONSTANTS.BOOK.GENRES),
+  genre: _.sample(_.values(CONSTANTS.GENRES)),
   author: {
     gender: Math.random() > 0.5 ? CONSTANTS.GENDERS.MALE : CONSTANTS.GENDERS.FEMALE,
     name: `${faker.name.firstName()} ${faker.name.lastName()}`

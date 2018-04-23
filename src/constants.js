@@ -14,8 +14,14 @@ const CONSTANTS = {
       SORT: 'SORT'
     }
   },
-  BOOK: {
-    GENRES: ['drama', 'romance', 'action', 'fantasy', 'sci-fi', 'finance', 'horror']
+  GENRES: {
+    DRAMA: 'drama',
+    ROMANCE: 'romance',
+    ACTION: 'action',
+    FANTASY: 'fantasy',
+    SCIFI: 'sci-fi',
+    FINANCE: 'finance',
+    HORROR: 'horror'
   },
   GENDERS: {
     MALE: 'male',
