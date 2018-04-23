@@ -1,5 +1,23 @@
+## Quick start
+
+- to run for development just do `npm install` and `npm start`
+- you can also view it deployed on my [website](http://maciej.mazur.site/casumo-list)
+
+## Used tech
+
+- `react` + `redux` for basics
+- `create-react-app` just to avoid custom setup, ejected due to webpack setup of webworker
+- webworker to perform sorting and data creation without freezing the ui
+- `react-virtualized` to tackle this DOM rendering challenge
+- more details in code comments
+
+## Tested on
+
+- latest chrome, firefox, edge
 
 ## Known issues
 
-- if there are loads of records, sorting completion freezes browser for notable amount of time
-- firefox blinks terribly on scroll :-(
+- have not really bothered to make a responsive website, so please use screen with 700px +
+- if there are loads of records (500,000+ on my machine), sorting freezes browser for notable amount of time on completion
+- firefox blinks terribly on scroll
+- webworker died once during my testing, doesnt really seems to be happening anymore though

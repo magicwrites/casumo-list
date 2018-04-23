@@ -4,11 +4,11 @@ import actions from './../../actions'
 import Sorters from './component'
 
 function mapStateToProperties(state, ownedProperties) {
-  const { sortBy, isUpdating } = state.filters
+  const { sortBy, update } = state.filters
 
   return {
     sortBy,
-    isUpdating
+    update
   }
 }
 

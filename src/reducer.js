@@ -29,7 +29,7 @@ const sortByReducer = (state = null, action) => {
   }
 }
 
-const isUpdatingReducer = (state = false, action) => {
+const updateReducer = (state = false, action) => {
   switch (action.type) {
     case CONSTANTS.ACTIONS.START_SORTING:
       return 'sort';
@@ -46,7 +46,7 @@ const isUpdatingReducer = (state = false, action) => {
 const filtersReducer = combineReducers({
   filterBy: filterByReducer,
   sortBy: sortByReducer,
-  isUpdating: isUpdatingReducer
+  update: updateReducer
 })
 
 const booksReducer = (state = null, action) => {

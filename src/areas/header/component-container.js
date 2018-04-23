@@ -7,7 +7,7 @@ function mapStateToProperties(state, ownedProperties) {
   const { books, filters } = state
 
   return {
-    isUpdating: filters.isUpdating,
+    update: filters.update,
     booksAmount: books ? books.length : 0,
     isSorted: !!filters.sortBy
   }

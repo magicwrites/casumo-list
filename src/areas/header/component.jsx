@@ -4,11 +4,11 @@ import formatNumber from 'simple-format-number'
 
 import './style.css'
 
-const Header = ({ onAdd, onAddThenSort, booksAmount, isSorted, isUpdating }) => {
+const Header = ({ onAdd, onAddThenSort, booksAmount, isSorted, update }) => {
   const addMethod = isSorted ? onAddThenSort : onAdd
   const increment = booksAmount
 
-  const isDisabled = isUpdating
+  const isDisabled = update
   const onAction = isDisabled ? () => {} : addMethod
 
   return (
