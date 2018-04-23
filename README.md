@@ -29,3 +29,16 @@
 - firefox blinks terribly on scroll
 - webworker died once during my testing, doesnt really seems to be happening anymore though
 - could have introduced less or sass to store some colors in variables, opted out since this is a really simple demo
+
+## Time spent
+
+- 3h for initial concept in `vuejs`
+- 2h to scrap vuejs and remake it in `react`, `redux` and `react-virtualized`
+- 4h to prepare webworker for sorting and creation duty
+- 4h for some styling to make it prettier
+- 2h to move webworker into single file rather than inline blob while ejecting `create-react-app`
+- 4h to refactor and order everything up nicely
+- 4h to again scrap styles and make it pretty like it is today
+- 2h to search for bugs, fix them, comment and deploy everything
+
+In total, around 25 hours on coding and a few hours spent in between to figure out how to approach the challenge.
