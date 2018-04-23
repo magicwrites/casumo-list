@@ -29,7 +29,7 @@
 - firefox blinks terribly on scroll
 - webworker died once during my testing, doesnt really seems to be happening anymore though
 - could have introduced less or sass to store some colors in variables, opted out since this is a really simple demo
-- no tests ╚(ಠ_ಠ)=┐
+- no tests (╯°□°）╯︵ ┻━┻
 
 ## Time spent
 
