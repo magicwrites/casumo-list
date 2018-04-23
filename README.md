@@ -22,13 +22,14 @@
 
 - latest chrome, firefox, edge
 
-## Known issues
+## Known flaws
 
 - have not really bothered to make a responsive website, so please use screen with 700px +
 - if there are loads of records (500,000+ on my machine), sorting freezes browser for notable amount of time on completion
 - firefox blinks terribly on scroll
 - webworker died once during my testing, doesnt really seems to be happening anymore though
 - could have introduced less or sass to store some colors in variables, opted out since this is a really simple demo
+- no tests ╚(ಠ_ಠ)=┐
 
 ## Time spent
 
