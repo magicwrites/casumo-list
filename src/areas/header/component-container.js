@@ -1,15 +1,16 @@
-import { connect } from 'react-redux';
-import Header from './component';
+import { connect } from 'react-redux'
 
-import actions from './../../../../actions'
+import actions from './../../actions'
+import Header from './component'
 
 function mapStateToProperties(state, ownedProperties) {
   const { books, filters } = state
 
   return {
+    isUpdating: filters.isUpdating,
     booksAmount: books ? books.length : 0,
     isSorted: !!filters.sortBy
-  };
+  }
 }
 
 function mapDispatchToProperties(dispatch, ownedProperties) {
@@ -19,4 +20,4 @@ function mapDispatchToProperties(dispatch, ownedProperties) {
   };
 }
 
-export default connect(mapStateToProperties, mapDispatchToProperties)(Header);
+export default connect(mapStateToProperties, mapDispatchToProperties)(Header)

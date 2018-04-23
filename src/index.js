@@ -11,9 +11,7 @@ import actions from './actions'
 import worker from './worker'
 import reducer from './reducer'
 
-import 'react-virtualized/styles.css';
-// import './style.css';
-
+import 'react-virtualized/styles.css' // info: expected to be imported once
 
 const middleware = [
   thunk,
@@ -24,7 +22,7 @@ const store = createStore(reducer, applyMiddleware(...middleware));
 
 worker.connect(store.dispatch)
 
-store.dispatch(actions.add(25000))
+store.dispatch(actions.add(125000))
 
 ReactDOM.render(
   <Provider store={store}>

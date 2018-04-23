@@ -1,0 +1,61 @@
+.toggle {
+  margin: 0 10px 10px 0;
+  margin-left: 0;
+  padding: 0 10px;
+  border-radius: 2px;
+  line-height: 30px;
+  width: 130px;
+  height: 30px;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.25s;
+  background: #DECBA4;
+  color: #666;
+}
+
+.toggle[disabled] {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.toggle svg {
+  transition: 0.25s;
+  opacity: 0;
+}
+
+.toggle.active {
+  background-color: white;
+  color: black;
+}
+
+.toggle.active svg {
+  opacity: 0.25;
+}
+
+.toggle .type {
+  opacity: 0.5;
+}
+
+.toggle svg,
+.toggle svg path {
+  display: block;
+  width: 10px;
+  height: 10px;
+}
+
+.toggle:hover {
+  cursor: pointer;
+  background-color: #ffebc1;
+  color: black;
+}
+
+.toggle.active:hover {
+  background-color: #ffeb85;
+}
+
+.toggle.active:hover svg {
+  opacity: 1;
+}

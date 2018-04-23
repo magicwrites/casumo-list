@@ -55,7 +55,7 @@ const randomizeBook = (x, i = 0) => ({
   genre: _.sample(CONSTANTS.BOOK.GENRES),
   author: {
     gender: Math.random() > 0.5 ? CONSTANTS.GENDERS.MALE : CONSTANTS.GENDERS.FEMALE,
-    name: faker.name.findName()
+    name: `${faker.name.firstName()} ${faker.name.lastName()}`
   }
 });
 

@@ -2,22 +2,22 @@ import { combineReducers } from 'redux';
 
 import CONSTANTS from './constants'
 
-const filterToggle = (items, item) => {
+const toggleFilter = (items, item) => {
   return items.find(x => x === item) ? items.filter(x => x !== item) : [...items, item]
 }
 
-const filterByReducerCreator = toggleAction => (state = [], action) => {
+const createFilterByReducer = toggleAction => (state = [], action) => {
   switch (action.type) {
     case toggleAction:
-      return filterToggle(state, action.payload.filter)
+      return toggleFilter(state, action.payload.filter)
     default:
       return state
   }
 }
 
 const filterByReducer = combineReducers({
-  genres: filterByReducerCreator(CONSTANTS.ACTIONS.TOGGLE_GENRE),
-  genders: filterByReducerCreator(CONSTANTS.ACTIONS.TOGGLE_AUTHOR_GENDER),
+  genres: createFilterByReducer(CONSTANTS.ACTIONS.TOGGLE_GENRE),
+  genders: createFilterByReducer(CONSTANTS.ACTIONS.TOGGLE_AUTHOR_GENDER),
 })
 
 const sortByReducer = (state = null, action) => {

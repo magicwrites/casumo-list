@@ -1,7 +1,7 @@
 import React from 'react';
 import { List, WindowScroller } from 'react-virtualized'
 
-import Book from './../book/component'
+import Book from './../../common/book/component'
 
 class BookVirtualList extends React.Component {
   render() {
@@ -9,7 +9,7 @@ class BookVirtualList extends React.Component {
     const rowHeight = 80;
 
     if (!books) {
-      return <div>First books are beeing randomized...</div>
+      return <div></div>
     }
 
     if (!books.length) {

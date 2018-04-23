@@ -15,10 +15,10 @@ function startAddition(amount) {
   };
 }
 
-function startSorting() {
+function startSorting(path) {
   return {
     type: CONSTANTS.ACTIONS.START_SORTING,
-    payload: {}
+    payload: { path }
   };
 }
 
@@ -47,16 +47,18 @@ const add = amount => dispatch => {
 const addThenSort = amount => (dispatch, getState) => {
   dispatch(startAddition(amount));
 
-  const { books, filter } = getState()
+  const state = getState()
+  const { books, filter } = state
   const payload = { amount, books, path: filter.sortBy }
 
   worker.postMessage({ payload, request: CONSTANTS.WORKER.REQUESTS.ADD_THEN_SORT })
 }
 
 const sort = path => (dispatch, getState) => {
-  dispatch(startSorting());
+  dispatch(startSorting(path));
 
-  const { books } = getState()
+  const state = getState()
+  const { books } = state
   const payload = { books, path }
 
   worker.postMessage({ payload, request: CONSTANTS.WORKER.REQUESTS.SORT })

@@ -1,0 +1,31 @@
+.loader {
+  height: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #652f00;
+  line-height: 26px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: center;
+  z-index: 100;
+  opacity: 0;
+  transition: 0.25s;
+}
+
+.loader-bar > * {
+  width: 100% !important;
+}
+
+.loader-message {
+  margin-top: -4px;
+  padding-top: 4px;
+  height: 26px;
+  background: #DECBA4;
+}
+
+.loader.visible {
+  opacity: 1;
+}

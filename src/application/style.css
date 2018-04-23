@@ -1,18 +1,59 @@
-.header-top {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: white;
-  z-index: 100;
-  border-bottom: 1px solid #eee;
-  height: 100px;
-  /*box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06), 0 4px 5px 0 rgba(0,0,0,0.06), 0 1px 10px 0 rgba(0,0,0,0.08);*/
-  padding-top: 5px;
+html {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.header-bottom {
-  padding-top: 100px;
-  background-color: #51abda;
-  background-image: url('./header-background.png');
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  font-family: 'Lato';
+  overflow-y: scroll;
+}
+
+.root {
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #DECBA4, #ab8c71);
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
+}
+
+.application {
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #DECBA4, #ab8c71);
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
+}
+
+.container {
+  max-width: 800px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.sorters,
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sorters {
+  margin-top: 30px;
+}
+
+.list {
+  margin-top: 80px;
+}
+
+.list * {
+  outline: none;
 }
