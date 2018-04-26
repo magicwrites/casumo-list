@@ -5,6 +5,7 @@ import moment from 'moment'
 import CONSTANTS from './../../constants'
 import { checkForHorrorOnHalloween, checkForFinanceOnMonthLastFriday } from './../../domain'
 import IconBook from './../icons/book/component'
+import bookPropType from './prop-type'
 
 import './style.css'
 
@@ -41,4 +42,8 @@ const Book = ({ book }) => {
   )
 }
 
-export default Book;
+Book.propTypes = {
+  book: bookPropType
+}
+
+export default Book

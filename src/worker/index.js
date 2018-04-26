@@ -1,5 +1,5 @@
 import Worker from './source.worker.js'
-import actions from './../actions'
+import actions from './../actions.base'
 import CONSTANTS from './../constants'
 
 const instance = new Worker()

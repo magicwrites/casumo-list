@@ -29,7 +29,7 @@
 - chrome is not really handling well if there are more than 1,000,000 records, and usually dies
 - firefox and safari blinks terribly on scroll
 - could have introduced less or sass to store some colors in variables, opted out since this is a really simple demo
-- no tests (╯°□°）╯︵ ┻━┻
+- ~~no tests (╯°□°）╯︵ ┻━┻~~ ok, I have added a few
 
 ## Time spent
 
@@ -41,5 +41,6 @@
 - 4h to refactor and order everything up nicely
 - 4h to again scrap styles and make it pretty like it is today
 - 2h to search for bugs, fix them, comment and deploy everything
+- 2h to add sample prop type and tests just to show that I can
 
-In total, around 25 hours on coding and a few hours spent in between to figure out how to approach the challenge.
+In total, around 27 hours on coding and a few hours spent in between to figure out how to approach the challenge.

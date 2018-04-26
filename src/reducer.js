@@ -2,6 +2,15 @@ import { combineReducers } from 'redux';
 
 import CONSTANTS from './constants'
 
+// info: A proper thing to do would be to split reducers into
+//       separate files, but I let myself store everything here
+//       since it is such a small application, and otherwise
+//       I would have to create some kind of a nice directory
+//       structure for those.
+//
+//       So I opted for `Less directories` way, and this
+//       reducers file here is still pretty readable I think.
+
 const toggleFilter = (items, item) => {
   return items.find(x => x === item) ? items.filter(x => x !== item) : [...items, item]
 }
