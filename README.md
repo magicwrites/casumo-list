@@ -1,7 +1,8 @@
 ## Quick start
 
+- original [task description can be found here](/OBJECTIVE.md)
 - to run for development just do `npm install` and `npm start`
-- you can also view it deployed on my [website](http://maciej.mazur.site/casumo-list)
+- you can also view it deployed on my [website](http://casumolist.mazur.site)
 
 ## Used tech
 
